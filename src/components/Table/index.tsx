@@ -169,8 +169,8 @@ const TableFormat = (data: any) => {
             {sortedCountries
               .filter(
                 (country) =>
-                  country.name?.toLowerCase().includes(data.data) ||
-                  country.capital?.toLowerCase().includes(data.data)
+                  country.name?.toLowerCase().includes(data.data.toLowerCase()) ||
+                  country.capital?.toLowerCase().includes(data.data.toLowerCase())
               )
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((country, index) => (
